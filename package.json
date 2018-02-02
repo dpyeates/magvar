@@ -1,0 +1,33 @@
+{
+  "name": "magvar",
+  "version": "1.0.0",
+  "author": "Darren Yeates",
+  "email": "apps@sensorworks.co.uk",
+  "license": "MIT",
+  "description": "Calculates magnetic variation at a specified location based upon the World Magnetic Model 2015-2020.",
+  "main": "src/magvar.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dpyeates/react-native-magvar.git"
+  },
+  "keywords": [
+    "react-native",
+    "magvar",
+    "magnetic variation"
+  ],
+  "bugs": {
+    "url": "https://github.com/dpyeates/react-native-magvar/issues"
+  },
+  "homepage": "https://github.com/dpyeates/react-native-magvar#readme",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "jest": "^22.1.4"
+  },
+  "jest": {
+    "verbose": true,
+    "testEnvironment": "node"
+  }
+}
