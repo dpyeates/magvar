@@ -11,17 +11,17 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/dpyeates/react-native-magvar.git"
+    "url": "git+https://github.com/dpyeates/magvar.git"
   },
   "keywords": [
-    "react-native",
     "magvar",
-    "magnetic variation"
+    "magnetic variation",
+    "world magnetic model"
   ],
   "bugs": {
-    "url": "https://github.com/dpyeates/react-native-magvar/issues"
+    "url": "https://github.com/dpyeates/magvar/issues"
   },
-  "homepage": "https://github.com/dpyeates/react-native-magvar#readme",
+  "homepage": "https://github.com/dpyeates/magvar#readme",
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "jest": "^22.1.4"

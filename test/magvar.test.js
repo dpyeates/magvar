@@ -1,7 +1,7 @@
 // @flow
 'use strict';
 
-const MagVar = require('../src/MagVar');
+const MagVar = require('../src/magvar');
 
 const mv = new MagVar();
 

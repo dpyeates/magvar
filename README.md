@@ -14,9 +14,9 @@ Height should be specified in degrees.
 Option 1:
 The simplist way to use is to use statically.
 ```javascript
-import magvar from 'magvar';
+import Magvar from 'magvar';
 
-const variation = magvar.Get([latitude], [longitude]);
+const variation = Magvar.Get([latitude], [longitude]);
 
 ```
 
@@ -25,7 +25,7 @@ If you are going to be doing many calculations, it is better to create an instan
 ```javascript
 import magvar from 'magvar';
 
-const mv = new magvar();
+const mv = new Magvar();
 
 const variation = mv.GetMagVar([latitude in degrees], [longitude in degrees], [height in metres])
 ```
