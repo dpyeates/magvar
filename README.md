@@ -1,5 +1,5 @@
 # magvar
-Calculates Magnetic Variation at a given position using the World Magnetic model 2015-2020.
+Calculates Magnetic Variation at a given position using the World Magnetic Model 2015-2020.
 
 ## Getting started
 
