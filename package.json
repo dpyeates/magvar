@@ -4,7 +4,7 @@
   "author": "Darren Yeates",
   "email": "apps@sensorworks.co.uk",
   "license": "MIT",
-  "description": "Calculates magnetic variation at a specified location based upon the World Magnetic Model 2015-2020v2. More details can be found at https://www.ngdc.noaa.gov/geomag/WMM/DoDWMM.shtml",
+  "description": "Calculates magnetic variation at a specified location based upon the World Magnetic Model 2015-2020v2.",
   "main": "src/magvar.js",
   "scripts": {
     "test": "jest"

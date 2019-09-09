@@ -1,5 +1,6 @@
 # magvar
-Calculates Magnetic Variation at a given position using the World Magnetic Model 2015-2020v2.
+Calculates magnetic variation at a specified location based upon the World Magnetic Model 2015-2020v2. 
+More details can be found at: https://www.ngdc.noaa.gov/geomag/WMM/DoDWMM.shtml
 
 ## Getting started
 
