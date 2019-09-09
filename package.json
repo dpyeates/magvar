@@ -1,10 +1,10 @@
 {
   "name": "magvar",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": "Darren Yeates",
   "email": "apps@sensorworks.co.uk",
   "license": "MIT",
-  "description": "Calculates magnetic variation at a specified location based upon the World Magnetic Model 2015-2020.",
+  "description": "Calculates magnetic variation at a specified location based upon the World Magnetic Model 2015-2020v2. More details can be found at https://www.ngdc.noaa.gov/geomag/WMM/DoDWMM.shtml",
   "main": "src/magvar.js",
   "scripts": {
     "test": "jest"
@@ -16,15 +16,15 @@
   "keywords": [
     "magvar",
     "magnetic variation",
-    "world magnetic model"
+    "world magnetic model",
+    "noaa"
   ],
   "bugs": {
     "url": "https://github.com/dpyeates/magvar/issues"
   },
   "homepage": "https://github.com/dpyeates/magvar#readme",
   "devDependencies": {
-    "babel-cli": "^6.26.0",
-    "jest": "^22.1.4"
+    "jest": "^24.9.0"
   },
   "jest": {
     "verbose": true,

@@ -1,5 +1,5 @@
 # magvar
-Calculates Magnetic Variation at a given position using the World Magnetic Model 2015-2020.
+Calculates Magnetic Variation at a given position using the World Magnetic Model 2015-2020v2.
 
 ## Getting started
 
@@ -9,25 +9,17 @@ Calculates Magnetic Variation at a given position using the World Magnetic Model
 
 Latitudes and longitudes should be specified in degrees 
 N and E are positive, S and W negative.
-Height should be specified in degrees.
+Height is optional and should be specified in metres above mean sea level - defaults to 0 if not given.
 
-Option 1:
-The simplist way to use is to use statically.
 ```javascript
-import Magvar from 'magvar';
+import MagVar from 'magvar';
 
-const variation = Magvar.Get([latitude], [longitude]);
+const magVar = MagVar.get([latitude], [longitude]);
 
-```
+ // or
+ 
+const magVar = MagVar.get([latitude], [longitude], [height]);
 
-Option 2:
-If you are going to be doing many calculations, it is better to create an instance and reuse.
-```javascript
-import magvar from 'magvar';
-
-const mv = new Magvar();
-
-const variation = mv.GetMagVar([latitude in degrees], [longitude in degrees], [height in metres])
 ```
 
 Take a look at the test file for some examples.
