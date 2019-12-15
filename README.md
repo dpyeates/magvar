@@ -1,16 +1,19 @@
 # magvar
-Calculates magnetic variation at a specified location based upon the World Magnetic Model 2015-2020v2. 
-More details can be found at: https://www.ngdc.noaa.gov/geomag/WMM/DoDWMM.shtml
+This package computes the estimated Magnetic Declination (Decl) (which is sometimes called Magnetic variation) at a specified location based upon the World Magnetic Model 2020-2025. More details can be found at: [https://www.ngdc.noaa.gov/geomag/WMM/DoDWMM.shtml](https://www.ngdc.noaa.gov/geomag/WMM/DoDWMM.shtml)
 
 ## Getting started
 
 `$ npm install magvar --save`
 
+or
+
+`$ yarn add magvar`
+
 ## Usage
 
-Latitudes and longitudes should be specified in degrees 
-N and E are positive, S and W negative.
-Height is optional and should be specified in metres above mean sea level - defaults to 0 if not given.
+Input required is a spot location in geodetic (WGS84) latitude and longitude (positive for northern latitudes and eastern longitudes), geodetic altitude in meters, and the date of interest in years.
+
+Altitude is optional and should be specified in meters above mean sea level - defaults to 0 if not given.
 
 ```javascript
 import MagVar from 'magvar';
