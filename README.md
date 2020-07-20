@@ -13,7 +13,7 @@ or
 
 Input required is a spot location in geodetic (WGS84) latitude and longitude (positive for northern latitudes and eastern longitudes), geodetic altitude in meters, and the date of interest in years.
 
-Altitude is optional and should be specified in meters above mean sea level - defaults to 0 if not given.
+Altitude is optional and should be specified in kilometers above mean sea level - defaults to 0 if not given.
 
 ```javascript
 import MagVar from 'magvar';
