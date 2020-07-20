@@ -1,6 +1,6 @@
 {
   "name": "magvar",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "author": "Darren Yeates",
   "email": "apps@sensorworks.co.uk",
   "license": "MIT",
@@ -24,7 +24,7 @@
   },
   "homepage": "https://github.com/dpyeates/magvar#readme",
   "devDependencies": {
-    "jest": "^24.9.0"
+    "jest": "^26.1.0"
   },
   "jest": {
     "verbose": true,
