@@ -1,23 +1,29 @@
 {
   "name": "magvar",
-  "version": "1.0.3",
-  "author": "Darren Yeates",
-  "email": "apps@sensorworks.co.uk",
+  "version": "2.0.0",
+  "description": "Calculates magnetic variation at a specified location based upon the World Magnetic Model 2025-2030.",
+  "author": {
+    "name": "Darren Yeates",
+    "email": "apps@sensorworks.co.uk"
+  },
   "license": "MIT",
-  "description": "Calculates magnetic variation at a specified location based upon the World Magnetic Model 2020-2025.",
+  "licenseFilename": "LICENSE",
   "main": "src/magvar.js",
   "scripts": {
     "test": "jest"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/dpyeates/magvar.git"
+    "url": "git+https://github.com/dpyeates/magvar.git",
+    "baseUrl": "https://github.com/dpyeates/magvar"
   },
   "keywords": [
     "magvar",
     "magnetic variation",
     "world magnetic model",
-    "noaa"
+    "noaa",
+    "wmm",
+    "wmm 2025"
   ],
   "bugs": {
     "url": "https://github.com/dpyeates/magvar/issues"
