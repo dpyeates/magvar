@@ -6,12 +6,6 @@ describe('MagVar tests', () => {
   // you can use the online calculator at
   // http://www.geomag.bgs.ac.uk/data_service/models_compass/wmm_calc.html
 
-  test('can calculate Magvar for a spot location', () => {
-    const lat = 51.2;
-    const lon = -0.3;
-    expect(magvar(lat, lon)).toBeCloseTo(0.873, 1);
-  });
-
   test('can calculate Magvar using the World Magnetic Model 2025-2030 test data', () => {
     testData.forEach((test) => {
       const year = Math.trunc(test[0]);
@@ -29,7 +23,7 @@ describe('MagVar tests', () => {
     const lat = 51.2;
     const lon = -0.3;
     const d = new Date();
-    const julianDaysNow = gregorianToJulian(d.getFullYear(), d.getMonth(), d.getDay());
+    const julianDaysNow = gregorianToJulian(d.getFullYear(), d.getMonth(), d.getDate());
     const magVarNow = calculateMagVar(julianDaysNow, lat, lon, 0);
     expect(magvar(lat, lon)).toBeCloseTo(magVarNow, 1);
   });

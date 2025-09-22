@@ -29,7 +29,7 @@ for (let m = 0; m <= 12; m++) {
 }
 
 const d = new Date();
-const julianDaysNow = gregorianToJulian(d.getFullYear(),d.getMonth(),d.getDay());
+const julianDaysNow = gregorianToJulian(d.getFullYear(),d.getMonth(),d.getDate());
 
 /**
  * magvar
