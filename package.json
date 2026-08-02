@@ -1,6 +1,6 @@
 {
   "name": "magvar",
-  "version": "2.0.1",
+  "version": "2.1.0",
   "description": "Calculates magnetic variation at a specified location based upon the World Magnetic Model 2025-2030.",
   "author": {
     "name": "Darren Yeates",
@@ -9,6 +9,17 @@
   "license": "MIT",
   "licenseFilename": "LICENSE",
   "main": "src/magvar.js",
+  "exports": {
+    ".": "./src/magvar.js",
+    "./utils": "./src/utils.js"
+  },
+  "files": [
+    "src/magvar.js",
+    "src/utils.js",
+    "src/WMMCOF2025.js",
+    "LICENSE",
+    "README.md"
+  ],
   "scripts": {
     "test": "jest"
   },
@@ -30,7 +41,7 @@
   },
   "homepage": "https://github.com/dpyeates/magvar#readme",
   "devDependencies": {
-    "jest": "^26.1.0"
+    "jest": "^29.7.0"
   },
   "jest": {
     "verbose": true,
