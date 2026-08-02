@@ -1,42 +1,67 @@
-<img src="https://www.ncei.noaa.gov/sites/g/files/anmtlf171/files/inline-images/D.jpg" width="100%" alt="React Native Gesture Handler by Software Mansion">
+<img src="https://www.ncei.noaa.gov/sites/g/files/anmtlf171/files/inline-images/D.jpg" width="100%" alt="World Magnetic Model declination map">
 
 # magvar
-This package computes the estimated Geomagnetic Declination (which is sometimes called Magnetic variation) at a specified location based upon the **World Magnetic Model 2025-2030**. More details about the World Magnetic Model can be found here: [https://www.ncei.noaa.gov/products/world-magnetic-model](https://www.ncei.noaa.gov/products/world-magnetic-model)
+This package computes the estimated Geomagnetic Declination (magnetic variation) and related field components at a specified location using the **World Magnetic Model 2025-2030**. More details: [World Magnetic Model (NCEI)](https://www.ncei.noaa.gov/products/world-magnetic-model).
 
-## BREAKING CHANGE IN VERSION 2.0
-If you are upgrading from version 1, note that the way you import the module has changed, as well as the name of the method you call. The 'get' method in version 1 has now been renamed 'magvar'.
+The model is valid for decimal years **2025.0 through 2030.0**. Calls outside that range still return a value, but a warning is emitted.
 
 ## Installation
 
-`$ npm install magvar --save`
+```bash
+npm install magvar --save
+```
 
 or
 
-`$ yarn add magvar`
+```bash
+yarn add magvar
+```
 
 ## Usage
 
-Input required is a spot location in geodetic (WGS84) latitude and longitude (positive for northern latitudes and eastern longitudes), and altitude.
+Inputs are geodetic (WGS84) latitude and longitude in degrees (north/east positive, south/west negative), and optional altitude in **kilometers above mean sea level** (defaults to `0`).
 
-Altitude is optional and should be specified in **kilometers above mean sea level** - defaults to 0 if not given.
+An optional fourth argument selects the evaluation time: a **decimal year** (e.g. `2026.5`) or a `Date`. If omitted, the current UTC time is used.
 
 ```javascript
-import {magvar} from 'magvar';
+const { magvar, magneticField } = require('magvar');
+// or: import { magvar, magneticField } from 'magvar';
 
-const variation = magvar([latitude], [longitude]);
+const variation = magvar(51.5, -0.1);
+const variationAtAltitude = magvar(51.5, -0.1, 0.1); // 100 m → 0.1 km
+const variationIn2027 = magvar(51.5, -0.1, 0, 2027.0);
+const variationOnDate = magvar(51.5, -0.1, 0, new Date('2027-06-01T00:00:00Z'));
 
- // or
-
-const variation = magvar([latitude], [longitude], [altitude]);
-
+const field = magneticField(51.5, -0.1, 0, 2025.0);
+// field.declination, field.inclination (degrees)
+// field.x, field.y, field.z, field.h, field.f (nT)
 ```
 
-Take a look at the test file for some examples.
-  
-## Test
-After installing:
+### Advanced / legacy helpers
+
 ```javascript
-npm run test
+const {
+  calculateMagVarForDecimalYear,
+  calculateMagneticField,
+  calculateMagVar, // Julian Day Number (legacy)
+  MODEL_EPOCH,
+  MODEL_VALID_UNTIL
+} = require('magvar');
+
+const { dateToDecimalYear, gregorianToJulian } = require('magvar/utils');
+```
+
+## Breaking changes in 2.1
+
+- `julianDaysNow` is no longer exported. Pass a `Date` or decimal year to `magvar`, or use `dateToDecimalYear`.
+- `magvar()` now evaluates against the **current** date on each call (not a value frozen at module load).
+- Unused WMM 2020 coefficient file removed from the package.
+
+## Test
+
+```bash
+npm install
+npm test
 ```
 
 ## License
