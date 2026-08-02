@@ -59,6 +59,8 @@ const { dateToDecimalYear, gregorianToJulian } = require('magvar/utils');
 
 ## Test
 
+Tests validate against the official NOAA/NCEI [`WMM2025_TEST_VALUES.txt`](https://www.ncei.noaa.gov/sites/default/files/2025-02/WMM2025_TEST_VALUES.txt) document (checked in under `test/fixtures/`), plus an extended regression set spanning 2025.0–2029.5.
+
 ```bash
 npm install
 npm test
